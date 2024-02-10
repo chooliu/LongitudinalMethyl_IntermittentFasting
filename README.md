@@ -1,11 +1,10 @@
-# LongitudinalMethyl_IntermittentFasting 
+# LongitudinalMethyl_IntermittentFasting
 
 ## Summary
 
 Testing associations between longitudinal measurements of methylation and participant weight/cardiometabolic outcomes in the Daily Caloric Restriction vs. Intermittent Fasting Trial (DRIFT).
 
-We show that **(i) trial participants' baseline, pre-intervention methylation profiles in PBMC are associated with their 3-month and 6-month weight and cardiometabolic outcomes**, and that **(ii) intermittent fasting is associated with different 3-month changes in DNA methylation levels than daily caloric restriction**, controlling for cell composition, ancestry (measured via genotyping array), baseline BMI, age, sex, and technical confounders.
-
+We show that **(i) trial participants' baseline, pre-intervention methylation profiles in PBMC are associated with their 3-month and 6-month weight and cardiometabolic outcomes**, and that **(ii) intermittent fasting is associated with different 3-month changes in DNA methylation levels than daily caloric restriction**, controlling for cell composition, ancestry (measured via genotyping array), baseline BMI, age, sex, and technical confounders. These intervention-Δmethylation and baseline methylation-Δoutcome are supported by statistical significant in regression modeling, as well as high predictive performance in machine learning models.
 
 ## Files in Repo
 
@@ -16,6 +15,7 @@ File Structure
 │   └─ B_EDA_Descriptive_Stats/     # exploratory data analysis: demographics, outcomes
 │   └─ C_Single_DMP_Modeling/       # univariate testing of CpGs
 │   └─ D_Multiprobe_Modeling/       # multivariate testing (DMRs, machine learning models)
+│   └─ E_Plot_DMPsDMRs/             # figures
 └─ README.md                        # this readme
 └─ sessionInfo.txt                  # version control
 ```
@@ -23,9 +23,10 @@ File Structure
 **Code Sections:**
 
 * **A_Preprocessing**: processing of methylation & genotype array data (incl. ancestry, cell composition, RUVg inference), tidying clinical metadata 
-* **B_EDA_Descriptive_Stats**: exploratory data analysis
+* **B_EDA_Descriptive_Stats**: exploratory data analysis, global associations between methyl and measured variables
 * **C_Single_DMP_Modeling**: single CpG at a time testing of baseline methylation <--> Δoutcomes, and intervention <--> Δmethylation regression modeling / visualization (where Δ = 3mo - baseline or 6mo - baseline changes)
-* **D_Multiprobe_Modeling**: differentially methylated region calling, multiple CpG at a time prediction models for feature selection and association estimates (e.g., variance in Δinsulin levels explained by baseline methylation)
+* **D_Multiprobe_Modeling**: differentially methylated region calling, multiple CpG at a time prediction models for feature selection and association estimates (e.g., use r^2 to show high variance in Δinsulin levels explained by baseline methylation compared to clinical info only)
+* **E_PlotDMPsDMRs/**: plot differentially methylated probes and regions
 
 ## Links
 
